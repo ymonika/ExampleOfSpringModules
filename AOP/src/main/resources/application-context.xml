@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<context:component-scan base-package="com.example"/>
+
+	<bean id="customerService" class="com.example.aop.CustomerService">
+		<property name="name" value="XYZ"/>
+		<property name="url" value="google.in"/>
+	</bean>
+
+	<bean id="beforeMethodInterceptor" class="com.example.aop.BeforeMethodInterceptor" />
+	<bean id="afterMethodInterceptor" class="com.example.aop.AfterMethodInterceptor"/>
+	<bean id="throwExceptionInterceptor" class="com.example.aop.ThrowExceptionInterceptor" />
+	<bean id="customerServiceProxy"
+		  class="org.springframework.aop.framework.ProxyFactoryBean">
+		<property name="target" ref="customerService" />
+		<property name="interceptorNames">
+			<list>
+				<value>beforeMethodInterceptor</value>
+				<value>afterMethodInterceptor</value>
+				<value>throwExceptionInterceptor</value>
+			</list>
+		</property>
+	</bean>
+
+	<!--Above we have used 3 interceptor instead of this, We can combine all of them with single MethodInterceptor.
+	Example is given below-->
+	<!--<bean id="aroundMethodInterceptor" class="com.example.aop.AroundMethodInterceptor"/>
+	<bean id="customerServiceProxy"
+		  class="org.springframework.aop.framework.ProxyFactoryBean">
+		<property name="target" ref="customerService" />
+		<property name="interceptorNames">
+			<list>
+				<value>aroundMethodInterceptor</value>
+			</list>
+		</property>
+	</bean>-->
+
+</beans>
