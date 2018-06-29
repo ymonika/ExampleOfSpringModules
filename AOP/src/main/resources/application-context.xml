@@ -9,17 +9,17 @@
 
 	<context:component-scan base-package="com.example"/>
 
-	<bean id="customerService" class="com.example.aop.CustomerService">
+	<bean id="customer" class="com.example.Customer">
 		<property name="name" value="XYZ"/>
 		<property name="url" value="google.in"/>
 	</bean>
 
-	<bean id="beforeMethodInterceptor" class="com.example.aop.BeforeMethodInterceptor" />
-	<bean id="afterMethodInterceptor" class="com.example.aop.AfterMethodInterceptor"/>
-	<bean id="throwExceptionInterceptor" class="com.example.aop.ThrowExceptionInterceptor" />
+	<bean id="beforeMethodInterceptor" class="com.example.BeforeMethodInterceptor" />
+	<bean id="afterMethodInterceptor" class="com.example.AfterMethodInterceptor"/>
+	<bean id="throwExceptionInterceptor" class="com.example.ThrowExceptionInterceptor" />
 	<bean id="customerServiceProxy"
 		  class="org.springframework.aop.framework.ProxyFactoryBean">
-		<property name="target" ref="customerService" />
+		<property name="target" ref="customer" />
 		<property name="interceptorNames">
 			<list>
 				<value>beforeMethodInterceptor</value>
@@ -34,7 +34,7 @@
 	<!--<bean id="aroundMethodInterceptor" class="com.example.aop.AroundMethodInterceptor"/>
 	<bean id="customerServiceProxy"
 		  class="org.springframework.aop.framework.ProxyFactoryBean">
-		<property name="target" ref="customerService" />
+		<property name="target" ref="customer" />
 		<property name="interceptorNames">
 			<list>
 				<value>aroundMethodInterceptor</value>

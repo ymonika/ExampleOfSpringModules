@@ -3,6 +3,7 @@
 ###### Core Container:
 The Core Container consists of the Core, Beans, Context and Expression modules.
 The Core and Beans modules provide IoC and Dependency Injection features.
+In Core Module, Customer bean is injected with Setter & Constructor based DI.
 
 ###### Data Access/Integration:
 The Data Access/Integration layer consists of the JDBC, ORM, OXM, JMS and Transaction modules.
