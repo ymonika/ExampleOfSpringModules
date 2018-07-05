@@ -14,3 +14,8 @@ JMS module supports Java Messaging Service.
 AOP module allows you to define method-interceptors & pointcuts to decouple actual functionality.
 Each Interceptor is going to invoke before making any call to any method of CustomerService.
 This dependency "cglib:cglib:2.2.2" supports Proxy behaviour.
+
+###### SpringBatchExample:
+This example will give you idea about Spring batch processing.
+"report.csv" file have some data, "CsvFileItemReader" will read line by line and pass it to "CustomerItemProcessor".
+"Main.java" this is a main class.

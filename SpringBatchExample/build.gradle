@@ -1,0 +1,20 @@
+group 'SpringBatchExample'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+}
+
+dependencies {
+    compile "org.springframework:spring-context-support:4.3.2.RELEASE",
+            "org.springframework:spring-core:4.3.2.RELEASE",
+            "org.springframework:spring-jdbc:3.1.0.RELEASE",
+            "org.springframework.batch:spring-batch-core:3.0.8.RELEASE"
+    compile "commons-dbcp:commons-dbcp:1.2.2"
+    compile 'mysql:mysql-connector-java:5.1.31'
+
+}

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:batch="http://www.springframework.org/schema/batch"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd
+    http://www.springframework.org/schema/batch
+	http://www.springframework.org/schema/batch/spring-batch-3.0.xsd">
+
+    <context:component-scan base-package="com.example"/>
+
+    <bean id="jobRepository" class="org.springframework.batch.core.repository.support.MapJobRepositoryFactoryBean"/>
+
+    <bean id="jobLauncher" class="org.springframework.batch.core.launch.support.SimpleJobLauncher">
+        <property name="jobRepository" ref="jobRepository"/>
+    </bean>
+
+    <batch:job id="batchWriter">
+        <batch:step id="readAndWrite">
+            <batch:tasklet>
+                <batch:chunk reader="csvFileItemReader" processor="customerItemProcessor" writer="customerItemWriter"
+                             commit-interval="2"/>
+            </batch:tasklet>
+        </batch:step>
+    </batch:job>
+
+    <bean id="csvFileItemReader" class="org.springframework.batch.item.file.FlatFileItemReader">
+        <property name="resource" value="report.csv"/>
+        <property name="lineMapper" ref="customerLineMapper"/>
+    </bean>
+    <bean id="customerLineMapper" class="org.springframework.batch.item.file.mapping.DefaultLineMapper">
+        <property name="lineTokenizer">
+            <bean class="org.springframework.batch.item.file.transform.DelimitedLineTokenizer">
+                <property name="names" value="customerId,name,date"/>
+            </bean>
+        </property>
+        <property name="fieldSetMapper" ref="customerFieldSetMapper"/>
+    </bean>
+    <bean id="transactionManager"
+          class="org.springframework.batch.support.transaction.ResourcelessTransactionManager"/>
+
+    <bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+
+    <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
+          destroy-method="close">
+        <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+        <property name="url" value="jdbc:mysql://localhost:3306/leancrm"/>
+        <property name="username" value="root"/>
+        <property name="password" value="root"/>
+    </bean>
+
+</beans>
