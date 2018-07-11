@@ -1,4 +1,4 @@
-# ExampleOfSpringModules
+# Spring-Tutorials
 
 ###### Core Container:
 The Core Container consists of the Core, Beans, Context and Expression modules.
