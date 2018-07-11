@@ -1,0 +1,44 @@
+group 'springexample'
+
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.5.9.RELEASE")
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'groovy'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+apply plugin: 'org.springframework.boot'
+
+jar {
+    baseName = 'gs-rest-service'
+    version =  '0.1.0'
+}
+
+repositories {
+    mavenCentral()
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+dependencies {
+    compile ("io.springfox:springfox-swagger2:2.6.1", "io.springfox:springfox-swagger-ui:2.6.1")
+    compile("org.springframework.boot:spring-boot-starter-web")
+    compile ("org.springframework:springloaded:1.2.6.RELEASE")
+    compile ("org.springframework.boot:spring-boot-starter-data-mongodb")
+    compile "joda-time:joda-time:2.2"
+    testCompile('org.springframework.boot:spring-boot-starter-test')
+
+    compile("org.springframework.boot:spring-boot-starter-activemq")
+    compile("org.apache.activemq:activemq-broker")
+
+    testCompile('org.spockframework:spock-core:0.7-groovy-2.0')
+
+}

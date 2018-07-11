@@ -1,4 +1,4 @@
-group 'ExampleOfSpringModules'
+group 'SpringTutorial'
 
 apply plugin: 'groovy'
 apply plugin: 'java'

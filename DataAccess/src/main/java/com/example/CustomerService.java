@@ -29,6 +29,7 @@ public class CustomerService {
                 "(\"" + customer.getName() + "\",\"" + customer.getCustomerId() + "\");");
 
         List<Customer> customers = jdbcTemplate.query("Select * from customers", new CustomerRowMapper());
+        System.out.println("Data From customers table:");
         customers.forEach(cust -> System.out.println(cust));
 
     }

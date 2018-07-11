@@ -9,11 +9,11 @@ public class Main {
 
         ApplicationContext appContext = new ClassPathXmlApplicationContext(new String[]{"classpath:application-context.xml"});
 
-        Customer customer = (Customer) appContext.getBean("customer");
-        System.out.println("Customer name: " +customer.getName() + "    Setter Injection using setName() method");
-        System.out.println("Customer Id: " +customer.getCustomerId() + "     Constructor Injection");
+        System.out.println("saveCustomer() method is going to save customers onto mysql database, where database schema name *test*");
 
         CustomerService customerService = (CustomerService) appContext.getBean("customerService");
         customerService.saveCustomer();
+
+
     }
 }
