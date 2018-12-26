@@ -1,0 +1,295 @@
+
+
+Upcoming Github projects:
+1. Builder pattern generator
+2. Cucumber integration for Direct Map to objects
+
+
+
+AWS
+
+Docker 
+Best Site to install Docker
+https://www.itzgeek.com/how-tos/linux/ubuntu-how-tos/how-to-install-docker-on-ubuntu-16-04.html
+
+Step 1: Check for kernel verion should ne 3.8+
+uname –a
+
+Step 2:
+sudo apt-get update
+
+Step 3:
+sudo apt-get install apt-transport-https ca-certificates
+
+Step 4:
+sudo apt-key adv \ --keyserver hkp://ha.pool.sks-keyservers.net:80 \ --recv-keys 58118E89F3A912897C070ADBF76221572C52609D
+
+Step 5: download as per ubuntu version 14.04
+echo "deb [arch=amd64] https://download.docker.com/linux/ubuntu trusty stable" | sudo tee /etc/apt/sources.list.d/docker.list
+
+
+
+website: aws-week
+https://acloud.guru/aws-this-week
+
+https://www.udemy.com/
+nitishag1418@gmail.com/udemy@249913
+
+aws
+express js
+angular 4
+javascript
+mongo-Db aggregation
+d3
+
+
+MATLAB
+SCALA
+GROOVY
+PYTHON
+
+upcoming git projects:
+Batch utility, Manual Pagination 
+yaml utility
+json parser
+json to xml converter
+pojo generator from json input
+Cycle rental
+Parkign Lot Problem OO design:
+
+
+
+Spring AOP [ Aspect Oriented Programming ]
+Spring Core Module.
+Spring Context [ J2EE ]
+Spring DAO Module [ Spring JDBC ]
+Spring Instruments
+Spring ORM module.
+Spring WEB-MVC Module.
+
+
+
+Inner Static classes
+Why method overriding doesn't allow to throw Broader Exception 
+Spring @Autowired works
+Spring DI
+
+
+How indexing & locking works at db level, 
+microservices
+Mongo Aggregation
+Oracle/MySql db queries
+
+
+
+Threading Examples:
+1. Consumer & Producer
+2. Traffic Signal
+
+1. Exception propogation
+2. Encapsultion & Abstraction
+3. When to use what Abstract Class & interface
+An interface is a way of defining a contract. When we talk about abstract classes we are defining characteristics of an object type, 
+specifying what an object is but in the case of an interface we define a capability and we bond to provide that capability, 
+we are talking about establishing a contract about what the object can do.
+
+Which should you use, abstract classes or interfaces?
+
+Consider using abstract classes if any of these statements apply to your situation:
+You want to share code among several closely related classes.
+You expect that classes that extend your abstract class have many common methods or fields, or require access modifiers other than public (such as protected and private).
+You want to declare non-static or non-final fields. This enables you to define methods that can access and modify the state of the object to which they belong.
+Consider using interfaces if any of these statements apply to your situation:
+
+You expect that unrelated classes would implement your interface. For example, the interfaces Comparable and Cloneable are implemented by many unrelated classes.
+You want to specify the behavior of a particular data type, but not concerned about who implements its behavior.
+You want to take advantage of multiple inheritance of type.
+An example of an abstract class in the JDK is AbstractMap, which is part of the Collections Framework. 
+Its subclasses (which include HashMap, TreeMap, and ConcurrentHashMap) share many methods (including get, put, isEmpty, containsKey, and containsValue) that AbstractMap defines
+
+4. Threading
+
+5. Design Principles
+6. Design Patterns
+Singleton, Builder, Stratergy, Decorator, Observer
+
+
+Spring REST
+HttpMessageConverter: Custom implementation
+
+
+CyclicBarrier and CountDownLatch
+
+What is Web Service ?
+What is SOAP ?
+What is REST Web Service ?
+What is difference between REST Web Service and SOAP web service ?
+Can a Java client can talk to C++ Server using Web Service ?
+What is WSDL?
+What is UDDI?
+Does Web Service call is synchronous or asynchronous ?
+How do you handle errors in Web Service call ?
+What is JAX-RPC ?
+Have you worked on Spring and Web-services ?
+What is WebServiceTemplate etc
+What is difference between RMI and Web Services
+
+
+Read more: http://www.java67.com/2012/09/top-10-java-web-service-interview-question-answer-soap-rest.html#ixzz5G77tmwsy
+
+
+Reverse the LinkedList, Find loop in LinkedList, Program to Find Anagram, 
+Program to check Armstrong Number, Program for Pallindrome and string permutation. 
+Working of Hashmaps? 
+Self Joins
+How does a future work? 
+We use AOP here to manage transaction management. How would you implement it?
+SQL to delete duplicates.  
+
+
+LeanCRM:
+Spring Batch
+HandlerInterceptorAdapter.java
+@RestControllerAdvice ExceptionHandler
+
+
+
+
+aws lambda
+schedulers cron ftp
+soap java setup
+Spring AOP
+Dynamic Property Manager
+Logging System
+spring-jdbc-batch-template
+Hibernate Envers
+jdk8, joda datetime, nio
+"Concurrency in Practice" (Implement Blocking Queue by your own for Producer and Consumer Problem)
+How does ConcurrentHashMap achieves its Scalability?
+Executer framework
+Thread safety
+Spring jersey
+Spring boot
+
+
+
+Dockers
+Netflix relies on message formats like Avro, Protobuf, and Thrift over TCP/IP for communicating internally and JSON over HTTP
+Message Format: Text (JSON/XML) or Binary (Thrift, Protocol Buffer, Apache Avro)
+
+InputStream vs FileReader
+Spring AOP
+-Execption Wrapping
+-Access Control/Security
+-Method Caching
+Customer Annotations
+-Strategy Design pattern
+
+Different Algorithms:
+Simple recursive algorithms.
+Backtracking algorithms.
+Divide and conquer algorithms.
+Dynamic programming algorithms.
+Greedy algorithms.
+Branch and bound algorithms.
+Brute force algorithms.
+Randomized algorithms.
+
+
+Greedy Algorithms:
+Travelling Salesman Problem
+Prim's Minimal Spanning Tree Algorithm
+Kruskal's Minimal Spanning Tree Algorithm
+Dijkstra's Minimal Spanning Tree Algorithm
+Graph - Map Coloring
+Graph - Vertex Cover
+Knapsack Problem
+Job Scheduling Problem
+
+Divide and Conquer:
+Merge Sort
+Quick Sort
+Binary Search
+Strassen's Matrix Multiplication
+Closest pair (points)
+
+Dynamic Programming:
+Fibonacci number series
+Knapsack problem
+Tower of Hanoi
+All pair shortest path by Floyd-Warshall
+Shortest path by Dijkstra
+Project scheduling
+
+Clean Code:
+-Descriptive names
+-Error_handling should be at one place
+-1st line in function is always try block & last statement should be catch/finally
+-Single return statement for a function, no break, no continue, no goto
+-Within a function, should have one entry and one exit
+-Variable should be declared close to their usage
+-Don’t Pass Null, Don’t return Null
+
+
+Git hub/ Blogging on below topics:
+
+Common Collections Java Multithreading JVM Distributed Correlation Common Frameworks\Third Party Components Architecture Design DB Related 
+Data Structures and Algorithms Netty Related Additional Skills Contact Author
+Common collection
+ArrayList/Vector
+LinkedList
+HashMap
+HashSet
+LinkedHashMap
+Java multithreading
+Common problems in multithreading
+Synchronize keyword principle
+Multi-threaded three cores
+Some knowledge of locks
+ReentrantLock implementation principle
+The implementation principle of ConcurrentHashMap
+Thread pool principle
+In-depth understanding of thread communication
+Alternately print parity
+JVM
+Java runtime memory partitioning
+Class loading mechanism
+OOM analysis
+Garbage collection
+Object creation and memory allocation
+The volatile keyword you should know
+Distributed correlation
+Distributed current limit
+Redis-based distributed lock
+Distributed cache design
+Distributed ID generator
+Common framework\third-party components
+Spring Bean life cycle
+Spring AOP implementation principle
+Guava source code analysis (Cache principle)
+SpringBoot startup process
+Tomcat class loading mechanism
+Architecture design
+Spike system design
+Spike architecture practice
+DB related
+MySQL indexing principle
+SQL optimization
+Database horizontal and vertical split
+Data Structures and Algorithms
+Red envelope algorithm
+Binary tree traversal
+Is it a happy number?
+Does the linked list have a ring?
+Return two values ​​from an array and add a subscript equal to the target value
+Consistent Hash algorithm
+Current limiting algorithm
+Three ways to reverse print one-way linked list
+Combine two ordered lists
+Two stack implementation queues
+Hands-on implementation of an LRU cache
+Netty related
+SpringBoot integrates long connection heartbeat mechanism
+Additional skills
+TCP/IP protocol
+
