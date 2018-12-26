@@ -33,6 +33,7 @@ dependencies {
     compile("org.springframework.boot:spring-boot-starter-web")
     compile ("org.springframework:springloaded:1.2.6.RELEASE")
     compile ("org.springframework.boot:spring-boot-starter-data-mongodb")
+    compile("org.springframework.boot:spring-boot-starter-data-jpa")
     compile "joda-time:joda-time:2.2"
     testCompile('org.springframework.boot:spring-boot-starter-test')
 
@@ -40,5 +41,4 @@ dependencies {
     compile("org.apache.activemq:activemq-broker")
 
     testCompile('org.spockframework:spock-core:0.7-groovy-2.0')
-
 }

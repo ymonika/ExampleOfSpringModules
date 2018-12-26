@@ -1,0 +1,22 @@
+group 'HibernateExample'
+
+rootProject.files('external-dependencies.gradle')
+
+apply plugin: 'java'
+apply plugin: 'groovy'
+
+apply plugin: 'idea'
+apply plugin: 'eclipse'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+}
+
+dependencies {
+    compile("org.hibernate:hibernate-core:4.3.5.Final")
+    compile("org.slf4j:slf4j-simple:1.7.5")
+    compile("mysql:mysql-connector-java:5.0.5")
+}

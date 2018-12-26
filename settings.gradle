@@ -1,3 +1,3 @@
 rootProject.name='SpringTutorial'
 
-include 'AOP', 'Core', 'DataAccess', 'SpringBatchExample', 'SpringBootExample', 'Spring-Jersey'
+include 'AOP', 'Core', 'DataAccess', 'SpringBatchExample', 'SpringBootExample', 'Spring-Jersey', 'HibernateExample'

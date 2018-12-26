@@ -11,6 +11,9 @@ public class Employee {
     private final String name;
     private String mobileNo;
 
+
+    private Department department;
+
     public Employee(long id, String name, String mobileNo) {
         this.id = id;
         this.name = name;
